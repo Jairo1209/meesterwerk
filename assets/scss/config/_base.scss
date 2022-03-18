@@ -1,0 +1,49 @@
+// Native css vars
+:root {
+  --menu-background: #{theme-color(secondary)};
+  --menu-color: #{theme-color(light)};
+  --menu-color-hover: #{theme-color(primary)};
+  --menu-border-color: #{lighten(theme-color(secondary), 3%)};
+  --hamburger-color: #{theme-color(primary)};
+  --lang-switch-color: #{theme-color(primary)};
+  --lang-switch-color-hover: #{theme-color(light)};
+  --logo-path-color: #{theme-color(light)};
+  --logo-circle-color: #{theme-color(primary)};
+}
+
+// Custom base config
+
+$img-path: '~@/assets/img/'; // background-image: img-path('image.jpg');
+$section-max-value: 100; // this will result in a max margin/padding of 100 pixels;
+
+// Transitions
+$map-transitions: (
+  primary: cubic-bezier(.22, .61, .36, 1)
+);
+
+// Global z-indexes
+$z-index: (
+  top-bar: 999,
+  menu: 998,
+  cookie-notice: 1200,
+  modal: 1000,
+  cursor: 9999,
+  footer: -50
+);
+
+// Button
+$button-height: rem(50px);
+$button-transition: transform 600ms transition(primary);
+
+// Layout : Hamburger
+$hamburger-size: rem(36px);
+$hamburger-bar-height: rem(3px);
+
+// Top bar
+$top-bar-height: rem(77px);
+$top-bar-font-size: rem(20px);
+
+$menu-border: rem(1px) solid var(--menu-border-color);
+
+// Layout
+$fullheight-minus-bottom-bar: calc(100vh - #{$top-bar-height});
