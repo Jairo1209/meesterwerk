@@ -9,12 +9,13 @@ $colors: (
   white: $white,
   red: #ff4848,
   lightgray: #ceceee,
-  gray: #d8d8d8,
+  gray: #343e3d,
+  green: #aedcc0
 );
 
 $theme-colors: (
-  primary: color(blue),
-  secondary: color(coal),
+  primary: color(gray),
+  secondary: color(green),
   secondary-100: lighten(color(coal), 2%),
   tertiary: color(pink),
   danger: color(red),

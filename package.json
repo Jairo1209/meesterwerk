@@ -32,12 +32,15 @@
     "bowser": "^2.10.0",
     "contentful": "^9.1.5",
     "cookie-universal-nuxt": "^2.1.4",
+    "gsap": "^3.9.1",
     "nuxt": "^2.15.8",
-    "nuxt-rfg-icon": "^0.6.4"
+    "nuxt-rfg-icon": "^0.6.4",
+    "swiper": "^8.0.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/svg": "^0.4.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
     "node-sass": "^5.0.0",

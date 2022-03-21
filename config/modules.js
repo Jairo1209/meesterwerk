@@ -18,5 +18,8 @@ export default {
     ['cookie-universal-nuxt', { alias: 'uCookie' }]
   ],
 
-  buildModules: ['@nuxtjs/stylelint-module']
+  buildModules: [
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/svg'
+  ]
 }

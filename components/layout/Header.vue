@@ -1,45 +1,43 @@
 <template>
-  <header class="l-container c-header">
-    <p class="c-header__descr">
-      Nuxt boilerplate {{ version }}
-    </p>
-    <h1>{{ data.title }}</h1>
-    <markdown
-      v-if="data.body"
-      class="c-header__content"
-      :md="data.body"
+  <div class="header">
+    <base-svg
+      class="header__logo"
+      name="icon-mylife-logo-large"
     />
-  </header>
+  </div>
 </template>
 
 <script>
 export default {
-  props: {
-    version: {
-      type: String,
-      default: ''
-    },
-    data: {
-      type: Object,
-      required: true
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-.c-header {
-  display: flex;
-  flex-wrap: wrap;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: rem(80px);
+  padding: rem(20px);
 
-  &__content {
-    flex: 0 0 percentage(3 / 6);
-    max-width: percentage(3 / 6);
-    margin-left: percentage(1 / 6);
+  body.theme-primary & {
+    &__logo {
+      color: theme-color(light);
+    }
   }
 
-  &__descr {
-    color: #4b4b4b;
+  body.theme-secondary & {
+    &__logo {
+      color: theme-color(secondary);
+    }
+  }
+
+  body.theme-light & {
+    &__logo {
+      color: theme-color(light);
+    }
   }
 }
 </style>

@@ -30,15 +30,5 @@ export default {
   axios: { baseURL: config.baseUrl },
   i18n: config.i18n,
   gtm: { enabled: true },
-  components: [
-    {
-      path: '~/components',
-      extensions: ['vue']
-    },
-    {
-      path: '~/components/layout',
-      prefix: 'l',
-      extensions: ['vue']
-    }
-  ]
+  components: true
 }

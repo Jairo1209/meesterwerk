@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Druk Wide Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./druk-wide-bold.woff2') format('woff2'), url('./druk-wide-bold.woff') format('woff');
+  font-family: 'Myriad Pro Bold';
+  font-style: bold;
+  font-weight: bold;
+  src: url('./myriad-pro-bold.woff2') format('woff2'), url('./myriad-pro-bold.woff') format('woff');
 }

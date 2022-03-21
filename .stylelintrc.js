@@ -10,7 +10,6 @@ module.exports = {
   ],
   rules: {
     'at-rule-no-unknown': null,
-    'color-named': ['never', { ignore: ['inside-function'] }],
     'declaration-no-important': true,
     'declaration-block-no-duplicate-properties': true,
     'max-nesting-depth': 4,

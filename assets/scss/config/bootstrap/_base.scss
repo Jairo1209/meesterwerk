@@ -9,7 +9,7 @@ $line-height-base: 1.65;
 
 // Body
 
-$body-bg: theme-color(secondary);
+$body-bg: theme-color(light);
 $body-color: theme-color(light);
 $body-letter-spacing: .01em;
 $text-muted: rgba($body-color, .6);
@@ -22,11 +22,11 @@ $link-hover-color: $link-color;
 $link-hover-decoration: underline;
 
 // Default font stack (used on <body>)
-$font-family-sans-serif: 'Cousine', courier, monospace;
+$font-family-sans-serif: 'Arial', courier, monospace;
 
 // Headings
 $headings-margin-bottom: .5em;
-$headings-font-family: 'Druk Wide Bold', helvetica, arial, sans-serif;
+$headings-font-family: 'Myriad Pro Bold', helvetica, arial, sans-serif;
 $headings-font-weight: normal;
 $headings-line-height: 1;
 $headings-letter-spacing: 0;

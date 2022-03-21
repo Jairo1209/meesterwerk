@@ -1,0 +1,6 @@
+section {
+  body.theme-dark & {
+    color: theme-color(primary);
+    background: theme-color(light);
+  }
+}

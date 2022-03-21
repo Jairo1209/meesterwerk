@@ -19,7 +19,8 @@ const fields = {
 
 export const state = () => ({
   data: {
-    home: { ...fields }
+    homepagePagina: { ...fields },
+    RecipesPage: { ...fields }
   }
 })
 
