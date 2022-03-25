@@ -16,7 +16,7 @@
         >
           <div class="swiper-slide__inner">
             <base-image
-              :img-src="slide.fields.img.fields.file.url"
+              :img-src="slide.fields.heroImage.fields.file.url"
             />
           </div>
         </div>
@@ -32,19 +32,21 @@
       </h6>
       <base-default-slider>
         <div
-          v-for="(slide, key) in entry.sliderFavorites"
+          v-for="(slide, key) in entry.sliderBreakfast"
           :key="key"
           class="swiper-slide"
         >
           <div class="swiper-slide__inner">
             <base-card
-              :src="slide.fields.img.fields.file.url"
+              :src="slide.fields.heroImage.fields.file.url"
+              :title="slide.fields.recipeTitle"
+              :time="slide.fields.recipeDetails[0]"
             />
           </div>
         </div>
       </base-default-slider>
     </section>
-    <!--
+
     <section
       class="slider-wrapper lunch section-inset-b ml-3"
     >
@@ -55,13 +57,15 @@
       </h6>
       <base-default-slider>
         <div
-          v-for="(slide, key) in entry.sliderFavorites"
+          v-for="(slide, key) in entry.sliderLunch"
           :key="key"
           class="swiper-slide"
         >
           <div class="swiper-slide__inner">
-            <base-image
-              :img-src="slide.fields.img.fields.file.url"
+            <base-card
+              :src="slide.fields.heroImage.fields.file.url"
+              :title="slide.fields.recipeTitle"
+              :time="slide.fields.recipeDetails[0]"
             />
           </div>
         </div>
@@ -78,18 +82,20 @@
       </h6>
       <base-default-slider>
         <div
-          v-for="(slide, key) in entry.sliderFavorites"
+          v-for="(slide, key) in entry.sliderDiner"
           :key="key"
           class="swiper-slide"
         >
           <div class="swiper-slide__inner">
-            <base-image
-              :img-src="slide.fields.img.fields.file.url"
+            <base-card
+              :src="slide.fields.heroImage.fields.file.url"
+              :title="slide.fields.recipeTitle"
+              :time="slide.fields.recipeDetails[0]"
             />
           </div>
         </div>
       </base-default-slider>
-    </section> -->
+    </section>
   </div>
 </template>
 
@@ -125,6 +131,7 @@ export default {
 
 <style lang="scss" scoped>
 .recipes {
+  padding-bottom: rem(80px);
   margin-top: rem(50px);
 }
 

@@ -1,9 +1,8 @@
 <template>
   <div class="header">
-    <base-svg
-      class="header__logo"
-      name="icon-mylife-logo-large"
-    />
+    <h6 class="header__logo m-0 text-uppercase">
+      MYLIFE
+    </h6>
   </div>
 </template>
 
@@ -21,6 +20,10 @@ export default {
   width: 100%;
   height: rem(80px);
   padding: rem(20px);
+
+  &__logo {
+    font-size: rem(24px);
+  }
 
   body.theme-primary & {
     &__logo {

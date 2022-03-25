@@ -6,7 +6,9 @@
           class="menu__link"
           to="/"
         >
-          <base-svg name="icon-mylife-logo" />
+          <h6 class="menu__logo m-0 text-uppercase">
+            MYLIFE
+          </h6>
         </n-link>
       </li>
       <li>
@@ -50,6 +52,10 @@ export default {
   z-index: 9999;
   width: 100%;
   background-color: theme-color(primary);
+
+  &__logo {
+    font-size: rem(17px);
+  }
 
   ul {
     width: 100%;

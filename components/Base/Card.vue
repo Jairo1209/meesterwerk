@@ -8,9 +8,9 @@
     </div>
     <div class="card__content">
       <h6 class="card__text m-0">
-        henk
+        {{ title }}
       </h6>
-      <span>15 min</span>
+      <span>{{ time }}</span>
     </div>
   </div>
 </template>
@@ -21,6 +21,14 @@ export default {
 
   props: {
     src: {
+      type: String,
+      default: undefined
+    },
+    title: {
+      type: String,
+      default: undefined
+    },
+    time: {
       type: String,
       default: undefined
     }
@@ -38,18 +46,24 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1), 0 3px 3px 0 rgba(0, 0, 0, .1);
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 90px;
     padding: rem(10px);
     color: #000;
     background-color: theme-color(light);
   }
 
   &__text {
+    font-size: 16px;
     color: theme-color(secondary);
   }
 
   &__image {
     width: 100%;
-    height: rem(120px);
+    height: 100%;
+    min-height: rem(120px);
     overflow: hidden;
   }
 }
