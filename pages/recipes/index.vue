@@ -15,6 +15,10 @@
           class="swiper-slide"
         >
           <div class="swiper-slide__inner">
+            <n-link
+              class="swiper-slide__link"
+              :to="`/recipes/${slide.fields.slug}`"
+            />
             <base-image
               :img-src="slide.fields.heroImage.fields.file.url"
             />
@@ -38,9 +42,11 @@
         >
           <div class="swiper-slide__inner">
             <base-card
+              recipe-card
               :src="slide.fields.heroImage.fields.file.url"
               :title="slide.fields.recipeTitle"
-              :time="slide.fields.recipeDetails[0]"
+              :details="slide.fields.recipeDetails[0]"
+              :link-to="`/recipes/${slide.fields.slug}`"
             />
           </div>
         </div>
@@ -63,9 +69,11 @@
         >
           <div class="swiper-slide__inner">
             <base-card
+              recipe-card
               :src="slide.fields.heroImage.fields.file.url"
               :title="slide.fields.recipeTitle"
-              :time="slide.fields.recipeDetails[0]"
+              :details="slide.fields.recipeDetails[0]"
+              :link-to="`/recipes/${slide.fields.slug}`"
             />
           </div>
         </div>
@@ -88,9 +96,11 @@
         >
           <div class="swiper-slide__inner">
             <base-card
+              recipe-card
               :src="slide.fields.heroImage.fields.file.url"
               :title="slide.fields.recipeTitle"
-              :time="slide.fields.recipeDetails[0]"
+              :details="slide.fields.recipeDetails[0]"
+              :link-to="`/recipes/${slide.fields.slug}`"
             />
           </div>
         </div>
@@ -153,8 +163,16 @@ export default {
     width: 100%;
     height: 100%;
     min-height: rem(100px);
-    // max-height: rem(120px);
     overflow: hidden;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

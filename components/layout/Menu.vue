@@ -68,14 +68,26 @@ export default {
 
   body.theme-primary & {
     background-color: theme-color(primary);
+
+    .menu__logo {
+      color: theme-color(light);
+    }
   }
 
   body.theme-secondary & {
     background-color: theme-color(secondary);
+
+    .menu__logo {
+      color: theme-color(light);
+    }
   }
 
   body.theme-light & {
     &__link {
+      color: theme-color(primary);
+    }
+
+    .menu__logo {
       color: theme-color(primary);
     }
 

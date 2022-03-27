@@ -20,7 +20,10 @@ const fields = {
 export const state = () => ({
   data: {
     homepagePagina: { ...fields },
-    RecipesPage: { ...fields }
+    RecipesPage: { ...fields },
+    recipeDetailPage: { ...fields },
+    workoutOverviewPage: { ...fields },
+    workoutPage: { ...fields }
   }
 })
 

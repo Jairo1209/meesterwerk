@@ -1,8 +1,13 @@
 <template>
   <div class="header">
-    <h6 class="header__logo m-0 text-uppercase">
-      MYLIFE
-    </h6>
+    <n-link
+      to="/"
+      class="text-decoration-none"
+    >
+      <h6 class="header__logo m-0 text-uppercase">
+        MYLIFE
+      </h6>
+    </n-link>
   </div>
 </template>
 
@@ -13,10 +18,12 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: rem(80px);
   padding: rem(20px);
