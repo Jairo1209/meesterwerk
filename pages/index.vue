@@ -20,11 +20,16 @@
           {{ item.fields.body }}
         </p>
       </div>
-      <img
-        class="homepage__img"
-        :src="`${item.fields.backgroundImage.fields.file.url}?fit=fill&w=2000&h=1500&q=80&fm=jpg&fl=progressive`"
-        alt="img"
-      >
+      <div class="image-wrapper">
+        <animations-zoom-effect>
+          <div class="homepage__img">
+            <img
+              :src="`${item.fields.backgroundImage.fields.file.url}?fit=fill&w=2000&h=1500&q=80&fm=jpg&fl=progressive`"
+              alt="img"
+            >
+          </div>
+        </animations-zoom-effect>
+      </div>
       <div class="homepage__overlay" />
     </div>
   </div>
@@ -53,10 +58,6 @@ export default {
     entry () {
       return this.$store.state.entries.data.homepagePagina.entry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
 }
 </script>
@@ -101,12 +102,19 @@ export default {
   }
 
   &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
+    max-width: 100vw;
     height: 100%;
-    object-fit: cover;
+    max-height: 100vh;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__overlay {
@@ -118,5 +126,18 @@ export default {
     height: 100%;
     background: rgba(0, 0, 0, .4);
   }
+}
+
+.image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+p {
+  font-size: 16px;
 }
 </style>

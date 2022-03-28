@@ -41,16 +41,18 @@
       <strong>INSTRUCTIES</strong>
       <div class="recipe-detailpage__cookingsteps-list">
         <ul class="p-0 mt-3 ">
-          <li
-            v-for="(item, key) in entry.cookingSteps"
-            :key="key"
-            class="list-unstyled d-flex flex-column mt-3 mb-3"
-          >
-            <h6 class="title m-0">
-              {{ item.fields.title }}
-            </h6>
-            <span class="body">{{ item.fields.body }}</span>
-          </li>
+          <animations-fade-in>
+            <li
+              v-for="(item, key) in entry.cookingSteps"
+              :key="key"
+              class="list-unstyled d-flex flex-column mt-3 mb-3"
+            >
+              <h6 class="title m-0">
+                {{ item.fields.title }}
+              </h6>
+              <span class="body">{{ item.fields.body }}</span>
+            </li>
+          </animations-fade-in>
         </ul>
       </div>
     </div>
@@ -77,12 +79,7 @@ export default {
     entry () {
       return this.$store.state.entries.data.recipeDetailPage.slugEntry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
-
 }
 </script>
 

@@ -42,12 +42,7 @@ export default {
     entry () {
       return this.$store.state.entries.data.landingPage.entry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
-
 }
 </script>
 

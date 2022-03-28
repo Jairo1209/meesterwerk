@@ -131,10 +131,6 @@ export default {
     entry () {
       return this.$store.state.entries.data.RecipesPage.entry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
 }
 </script>

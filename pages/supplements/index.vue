@@ -54,10 +54,6 @@ export default {
     entry () {
       return this.$store.state.entries.data.supplementOverviewPage.entry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
 }
 </script>
@@ -79,6 +75,7 @@ export default {
     p {
       display: -webkit-box;
       overflow: hidden;
+      font-size: 16px;
       color: theme-color(primary);
       text-overflow: ellipsis;
       -webkit-line-clamp: 4; /* number of lines to show */
@@ -97,6 +94,7 @@ export default {
 
   &__btn {
     padding: rem(2px) rem(25px);
+    font-size: 16px;
     text-decoration: none;
     background-color: theme-color(primary);
     border-radius: 50px;

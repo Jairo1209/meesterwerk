@@ -49,10 +49,6 @@ export default {
     entry () {
       return this.$store.state.entries.data.supplementPage.slugEntry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
 }
 </script>
@@ -81,6 +77,7 @@ export default {
 
 h3,
 p {
+  font-size: 16px;
   color: theme-color(primary);
   text-transform: inherit;
 }

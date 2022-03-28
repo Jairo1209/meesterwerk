@@ -53,10 +53,6 @@ export default {
     entry () {
       return this.$store.state.entries.data.workoutOverviewPage.entry
     }
-  },
-
-  mounted () {
-    console.log(this.entry)
   }
 }
 </script>

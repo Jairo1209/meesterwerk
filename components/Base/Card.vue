@@ -82,11 +82,22 @@ export default {
       padding: rem(10px);
       color: #000;
       background-color: theme-color(light);
+
+      span {
+        font-size: 16px;
+      }
     }
 
     .card__text {
+      display: -webkit-box;
+      overflow: hidden;
       font-size: 16px;
       color: theme-color(secondary);
+      text-overflow: ellipsis;
+      text-transform: inherit;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
   }
 
