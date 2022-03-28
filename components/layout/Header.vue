@@ -38,6 +38,12 @@ export default {
     }
   }
 
+  body.theme-primary-second & {
+    &__logo {
+      color: theme-color(primary);
+    }
+  }
+
   body.theme-secondary & {
     &__logo {
       color: theme-color(secondary);

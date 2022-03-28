@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="mobile-only">
+    <!-- <div class="mobile-only">
       <h3>switch to mobile device</h3>
-    </div>
+    </div> -->
 
     <layout-header />
 

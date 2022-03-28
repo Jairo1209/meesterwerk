@@ -2,8 +2,6 @@
  * <head></head> options
  *
  *
- * @author Uncommon
- * @author Rutger Bakker <rutger@getuncommon.digital>
  */
 
 let robots = []

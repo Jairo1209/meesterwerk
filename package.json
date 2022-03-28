@@ -2,7 +2,6 @@
   "name": "nuxt-boilerplate",
   "version": "1.0.3",
   "description": "nuxt-boilerplate",
-  "author": "Uncommon",
   "private": true,
   "license": "ISC",
   "engines": {

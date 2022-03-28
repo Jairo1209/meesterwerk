@@ -3,8 +3,6 @@
  *
  * nuxt-boilerplate
  *
- * @author Uncommon
- * @author Rutger Bakker <rutger@getuncommon.digital>
  */
 
 import config from './config/config.js'

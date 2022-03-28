@@ -61,5 +61,13 @@ export default {
       }
     }
   }
+
+  body.theme-primary-second & {
+    .return__button {
+      span {
+        background-color: theme-color(primary);
+      }
+    }
+  }
 }
 </style>

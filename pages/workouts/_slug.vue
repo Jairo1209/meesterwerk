@@ -20,10 +20,10 @@
       <div class="workout-detailpage__subtitle pb-1">
         <strong>OEFENINGEN</strong>
       </div>
-      <div class="workout-detailpage__ingredients-list">
+      <div class="workout-detailpage__exercises-list">
         <section class="section-inset-b">
           <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-md-12">
               <div
                 v-for="(item, key) in entry.exercisesList"
                 :key="key"
@@ -51,6 +51,16 @@
                   class="panel"
                 >
                   <p>{{ item.fields.body }}</p>
+
+                  <div
+                    v-if="item.fields.img.fields.file.url"
+                    class="panel__image"
+                  >
+                    <img
+                      :src="item.fields.img.fields.file.url"
+                      alt="exercise"
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,7 +95,6 @@ export default {
   },
 
   mounted () {
-    console.log(this.entry)
     this.accordeon()
   },
 
@@ -93,17 +102,19 @@ export default {
     accordeon () {
       const acc = this.$refs.accordion
       let i
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener('click',
-          function () {
-            this.classList.toggle('active')
-            const panel = this.nextElementSibling
-            if (panel.classList.contains('active')) {
-              panel.classList.remove('active')
-            } else {
-              panel.classList.add('active')
-            }
-          })
+      if (acc) {
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener('click',
+            function () {
+              this.classList.toggle('active')
+              const panel = this.nextElementSibling
+              if (panel.classList.contains('active')) {
+                panel.classList.remove('active')
+              } else {
+                panel.classList.add('active')
+              }
+            })
+        }
       }
     }
   }
@@ -124,6 +135,32 @@ export default {
   &__subtitle {
     border-bottom: solid 1px #fff;
   }
+
+  &__hero-img {
+    position: relative;
+    width: 100%;
+    height: rem(280px);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 40%;
+  }
 }
 
 span {
@@ -134,7 +171,7 @@ span {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 18px;
+  padding: 18px 0;
   font-size: 15px;
   color: theme-color(light);
   text-align: left;
@@ -183,9 +220,18 @@ span {
 
 .panel {
   max-height: 0;
-  padding: 0 18px;
+  // padding: 0 18px;
   overflow: hidden;
   transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+
+  &__image {
+    object-fit: contain;
+    width: 100%;
+
+    img {
+      object-fit: contain;
+    }
+  }
 }
 
 .active {

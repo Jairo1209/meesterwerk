@@ -2,8 +2,6 @@
  * Generate meta data
  *
  *
- * @author Uncommon
- * @author Rutger Bakker <rutger@getuncommon.digital>
  */
 
 const imgParams = {

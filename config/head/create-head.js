@@ -3,8 +3,6 @@
  * Include this in every single page for SEO
  *
  *
- * @author Uncommon
- * @author Rutger Bakker <rutger@getuncommon.digital>
  */
 
 import metaData from './meta.js'

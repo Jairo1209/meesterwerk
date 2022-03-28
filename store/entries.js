@@ -23,7 +23,10 @@ export const state = () => ({
     RecipesPage: { ...fields },
     recipeDetailPage: { ...fields },
     workoutOverviewPage: { ...fields },
-    workoutPage: { ...fields }
+    workoutPage: { ...fields },
+    supplementOverviewPage: { ...fields },
+    supplementPage: { ...fields },
+    landingPage: { ...fields }
   }
 })
 

@@ -10,20 +10,15 @@
         class="homepage__category-link"
         :to="item.fields.linkTo"
       />
-      <div class="homepage__content container">
+      <div
+        class="homepage__content container"
+      >
         <h5 class="homepage__title">
           {{ item.fields.title }}
         </h5>
         <p class="homepage__body">
           {{ item.fields.body }}
         </p>
-        <a
-          v-if="item.fields.btn"
-          class="homepage__btn"
-          href="#scrollto"
-        >
-          <strong>{{ item.fields.btn }}</strong>
-        </a>
       </div>
       <img
         class="homepage__img"
@@ -58,6 +53,10 @@ export default {
     entry () {
       return this.$store.state.entries.data.homepagePagina.entry
     }
+  },
+
+  mounted () {
+    console.log(this.entry)
   }
 }
 </script>
@@ -118,7 +117,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 25%;
+    opacity: 40%;
   }
 }
 </style>

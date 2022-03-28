@@ -97,6 +97,18 @@ export default {
     color: theme-color(primary);
   }
 
+  &__ingredients-list {
+    max-height: 420px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  &__cookingsteps-list {
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -105,7 +117,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 25%;
+    opacity: 40%;
   }
 
   &__hero-img {

@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <ul class="list-unstyled d-inline-flex align-items-center justify-content-around">
+    <ul class="list-unstyled d-inline-flex align-items-center justify-content-between">
       <li>
         <n-link
           class="menu__link"
@@ -50,6 +50,8 @@ export default {
   bottom: 0;
   left: 0;
   z-index: 9999;
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-color: theme-color(primary);
 
@@ -58,7 +60,8 @@ export default {
   }
 
   ul {
-    width: 100%;
+    width: 90%;
+    max-width: 300px;
     height: 80px;
   }
 
