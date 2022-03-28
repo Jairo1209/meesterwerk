@@ -10,6 +10,7 @@ export default {
     '@nuxtjs/gtm',
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
+    '@nuxtjs/pwa',
     ['@nuxtjs/markdownit', { injected: true }],
     '@nuxtjs/style-resources',
     ['nuxt-rfg-icon', { static: true }],

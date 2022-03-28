@@ -5,7 +5,7 @@
  *
  */
 
-export default function metaData (title = 'nuxt-boilerplate', url = '', description = '', img = '') {
+export default function metaData (title = 'MYLIFE', url = '', description = '', img = '') {
   return {
     title,
     link: [

@@ -103,12 +103,6 @@ export default {
     overflow-y: scroll;
   }
 
-  &__cookingsteps-list {
-    max-height: 200px;
-    overflow: hidden;
-    overflow-y: scroll;
-  }
-
   &__overlay {
     position: absolute;
     top: 0;
@@ -116,8 +110,7 @@ export default {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 40%;
+    background: rgba(0, 0, 0, .4);
   }
 
   &__hero-img {

@@ -22,6 +22,22 @@ export default {
   plugins,
   ...modules,
   build,
+  pwa: {
+    meta: {
+      title: 'MYLIFE',
+      author: 'Jairo Niks'
+    },
+    manifest: {
+      name: 'MYLIFE',
+      short_name: 'MYLIFE',
+      description: 'Neem het heft in eigen handen met MYLIFE',
+      lang: 'en'
+    },
+    icon: {
+      fileName: 'mylife-logo.png',
+      sizes: [64, 120, 144, 152, 192, 384, 512]
+    }
+  },
   generate: { fallback: true, subFolders: false },
   // router: { middleware: 'default' },
   styleResources: config.styleResources,
