@@ -31,7 +31,7 @@
     "bowser": "^2.10.0",
     "contentful": "^9.1.5",
     "cookie-universal-nuxt": "^2.1.4",
-    "gsap": "^3.9.1",
+    "gsap": "^3.10.4",
     "nuxt": "^2.15.8",
     "nuxt-rfg-icon": "^0.6.4",
     "swiper": "^8.0.7"
