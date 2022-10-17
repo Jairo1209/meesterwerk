@@ -34,7 +34,7 @@
     "gsap": "^3.9.1",
     "nuxt": "^2.15.8",
     "nuxt-rfg-icon": "^0.6.4",
-    "swiper": "^8.0.7"
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
