@@ -29,7 +29,7 @@
     "@nuxtjs/style-resources": "^1.2.1",
     "bootstrap": "^4.6.0",
     "bowser": "^2.10.0",
-    "contentful": "^9.1.5",
+    "contentful": "^9.2.17",
     "cookie-universal-nuxt": "^2.1.4",
     "gsap": "^3.9.1",
     "nuxt": "^2.15.8",
